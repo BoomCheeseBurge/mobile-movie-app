@@ -1,0 +1,119 @@
+
+Created an AppWrite account using GitHub account.
+
+Created a new project within appwrite called "React_Native_Movie_App" with a fixed region of "Germany" for free tier users.
+
+__________
+
+Created a new React Native project with Expo framework using the following command:
+
+npx create-expo-app@latest ./
+
+The './' is there to install the project in the current directory.
+
+If there is a step asking to install a package with the same name as the command, just proceed.
+
+__________
+
+Go to the Expo documentation from the React Native documentation where it (probably) says 'Continue with Expo'.
+
+For the environment, the device will be 'Android' and using built-in modules with 'Expo Go'.
+
+Install the 'Expo Go' app from the Play Store.
+
+Created an Expo Go account.
+
+__________
+
+Start the development server using the following command:
+
+`npx expo start`
+
+After running that command, there will be a barcode shown in the console output.
+
+Scan it using the Expo Go app on your phone.
+
+Afterwards, there will be bundling progress percentage shown on the mobile app and bundling progress on the IDE editor.
+
+When that is done, the view on the mobile app will be the default RN mobile app welcoming view.
+
+__________
+
+Go to this directory path "app/(tabs)/index.tsx" and open up the file.
+
+Try changing the title and see the hot reloading feature in action.
+
+__________
+
+-------------------------
+Project Folder Structure
+-------------------------
+
+- tsconfig.json
+
+Contains rules that TypeScript will use to enforce type safety throughout the project.
+
+------
+
+- package.json
+
+Contains the project's scripts, dependencies, and metadata.
+
+------
+
+- app.json
+
+Contains the configuration options for the project and is often called the app config.
+
+The slug value contains a unique identifiable value used by Expo when defining the URL (if the project is to be shown in the web).
+
+The orientation value indicates whether the app should initially open in portrait, or landscape, or default screen orientation mode.
+
+The icon is the full path to the app image to be displayed.
+
+The scheme contains a custom URL to enable deep linking.
+It is set to the value "movies" so that later on this can be done "movies://path/".
+
+The userInterfaceStyle determines the dark or light mode.
+
+The newArchEnabled was previously discussed as being the new architecture introduced in React Native.
+
+The android object contains specific features that can be extended specifically on Android devices.
+
+------
+
+- scripts folder
+
+Currently contains only a single file to reset the project to the bare minimum code.
+
+------
+
+- hooks, constants, components, assets folder
+
+Contains boilerplate code of custom hooks, constants, components, and assets.
+
+------
+
+- app folder
+
+Allows to route to different screens or views simialrly to NextJS.
+
+    o (tabs) folder
+
+    Manage the layouts for different pages.
+
+__________
+
+Press 'Ctrl + C' to stop the development server.
+
+To strip the project to its bare minimum code, run the following command:
+
+`npm run reset-project`
+
+When asked this question, just say no:
+
+'Do you want to move existing files to /app-example instead of deleting them? (Y/n):'
+
+Afterwards, run the development server again and press R on the keyboard.
+
+__________
