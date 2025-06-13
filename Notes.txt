@@ -291,3 +291,15 @@ As with how React development goes, repetitive things are meant to be placed int
 Create an inline component within the tabs layout component for the image background.
 
 ======================================================
+
+Since the default asset folder was deleted and replaced with a new one, the set image path in the 'app.json' file is no longer valid.
+
+Replace the image path the appropriate one.
+
+After that, reload the mobile app.
+
+__________
+
+Replacing the app name requires a restart of the mobile app in Expo Go.
+
+======================================================
