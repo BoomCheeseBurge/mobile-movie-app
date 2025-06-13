@@ -157,3 +157,137 @@ Define global styling for TailwindCSS.
 Open the 'tailwind.config.js' file and extend the theme property.
 
 ======================================================
+
+The app folder represents the route.
+
+The file names within that folder represents a URL pointing to that route.
+
+For example, the 'index.tsx' file represents the home route or starting of the mobile app.
+
+-----
+
+Created the 'onboarding.tsx' file in the app folder for a new route.
+
+|
+
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+
+const onboarding = () => {
+  return (
+    <View>
+      <Text>onboarding</Text>
+    </View>
+  )
+}
+
+export default onboarding
+
+const styles = StyleSheet.create({})
+
+|
+
+__________
+
+Created a new folder called 'movie' within the 'app' folder.
+
+Created a dynamic route, '[id].tsx' within that newly created folder.
+
+|
+
+import { useLocalSearchParams } from 'expo-router';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+
+const Details = () => {
+
+    const { id } = useLocalSearchParams();
+
+  return (
+    <View>
+      <Text>Movie details: {id}</Text>
+    </View>
+  )
+}
+
+export default Details;
+
+const styles = StyleSheet.create({})
+
+|
+
+Notice that the route within the movie folder is wrapped around square brackets which denotes a dynamic route.
+
+__________
+
+With that introduction, delete the onboarding tsx file and the movie folder.
+
+__________
+
+Open and view the Figma design for this course.
+
+The design for this mobile app will be based on that.
+
+__________
+
+Route grouping is a neat way of organizing sections of the mobile app.
+
+------
+
+Created a route group called 'tabs'.
+
+------
+
+There is the code snippet, rnfes or rnfe, to create boilerplate for a new functional component.
+
+------
+
+A layout is created in that tabs route group to ensure that the navigation bar only shows up for that screen layout.
+
+Moved the 'index.tsx' file to the route group folder.
+
+-------
+
+Created profile, saved, and search components.
+
+Created a folder called movie with a dynamic route as performed previously.
+
+-------
+
+In the layout component within the app folder, modifications are made to change the appearance of the header in the mobile app.
+
+Go over to the layout file for the tab route group and return a tab component there.
+
+Link: https://docs.expo.dev/router/advanced/tabs/
+
+This tabs component enables to modify how the bottom navigation looks.
+
+The word modify is mentioned here instead of create because even though only the home route had been declared, three other routes are declared as well.
+
+Out-of-the-box, React Native notices that there are other routes within the tabs route group.
+
+-------
+
+The order of the tabs screen components in the tabs' layout reflects the order of the tab navigation shown in the mobile app.
+
+__________
+
+Download the asset folder pre-made for this project here:
+
+https://github.com/adrianhajdin/react-native-movie-app/blob/main/README.md#links
+
+Delete the 'assets' folder.
+
+Move the folders within that downloaded zip file into this root project folder.
+
+--------
+
+Add the tab bar icon for each tab in the tab layout.
+
+__________
+
+As with how React development goes, repetitive things are meant to be placed into its own separate component for reusability.
+
+Create an inline component within the tabs layout component for the image background.
+
+======================================================
