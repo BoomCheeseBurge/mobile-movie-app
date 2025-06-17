@@ -303,3 +303,15 @@ __________
 Replacing the app name requires a restart of the mobile app in Expo Go.
 
 ======================================================
+
+Created a new folder for components.
+
+Create a new functional component called 'SearchBar'.
+
+Imported and used that newly created component in the homepage.
+
+----
+
+Used the router package from expo to direct the user to another route when clicking on the search field in the homepage.
+
+======================================================
