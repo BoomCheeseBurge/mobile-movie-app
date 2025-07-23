@@ -315,3 +315,37 @@ Imported and used that newly created component in the homepage.
 Used the router package from expo to direct the user to another route when clicking on the search field in the homepage.
 
 ======================================================
+
+TDMB doc can be accessed here: https://developer.themoviedb.org/docs/getting-started
+
+Created a TMDB account.
+
+Go to settings > API > generate API token > fill in the form with necessary information.
+
+Afterwards, an API for read access will be shown for use.
+
+Go to the 'API Reference' section or page.
+
+Follow through the 'Getting Started' section.
+
+- Pick 'Node' for language.
+
+- The rest will be automatically filled in.
+
+- Click 'Try it' to see that it is working.
+
+Afterwards, type in 'discover movie' in the search bar. This is the direct link: https://developer.themoviedb.org/reference/discover-movie
+
+The code of the fetch request from this page is copied.
+
+-------
+
+Created a new folder called 'services'.
+
+Created a new file within that folder called 'api.ts'.
+
+-------
+
+Created a .env file to store the API credentials.
+
+Any env variables that will be used on the front-end side must be prepended by 'EXPO_PUBLIC'.
