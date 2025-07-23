@@ -349,3 +349,7 @@ Created a new file within that folder called 'api.ts'.
 Created a .env file to store the API credentials.
 
 Any env variables that will be used on the front-end side must be prepended by 'EXPO_PUBLIC'.
+
+======================================================
+
+Created a new file called 'useFetch.ts' for a custom hook.
