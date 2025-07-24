@@ -17,7 +17,7 @@ export const fetchMovies = async ({ query } : { query: string }) => {
     // Consider the query search for finding movies if any
     const endpoint = query
         ? `${TMDB_CONFIG.BASE_URL}/search/movie?query=${encodeURIComponent(query)}` : 
-        `${TMDB_CONFIG.BASE_URL}/dicover/movie?sort_by=popularity.desc`;
+        `${TMDB_CONFIG.BASE_URL}/discover/movie?sort_by=popularity.desc`;
 
     // Get the response
     const response = await fetch(endpoint, {
@@ -27,6 +27,7 @@ export const fetchMovies = async ({ query } : { query: string }) => {
 
     // Check if the response is empty
     if (!response.ok) {
+        // @ts-ignore
         throw new Error('Failed to fetch movies', response.statusText);
     } 
 

@@ -353,3 +353,9 @@ Any env variables that will be used on the front-end side must be prepended by '
 ======================================================
 
 Created a new file called 'useFetch.ts' for a custom hook.
+
+======================================================
+
+Modified the 'index.tsx' file to display movies in a neat way with cards.
+
+Created a component called 'MovieCard.tsx'.
