@@ -359,3 +359,11 @@ Created a new file called 'useFetch.ts' for a custom hook.
 Modified the 'index.tsx' file to display movies in a neat way with cards.
 
 Created a component called 'MovieCard.tsx'.
+
+======================================================
+
+Finished movie search by using the search query to search for movies.
+
+Use the useEffect hook to trigger fetching another set of movies when the search term changes after a certain interval.
+
+Take advantage of the Flatlist props to determine what to show in different states of the screen (results found or empty or error).
