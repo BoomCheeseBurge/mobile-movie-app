@@ -1,5 +1,4 @@
 import MovieCard from "@/components/MovieCard";
-import SearchBar from "@/components/SearchBar";
 import { icons } from "@/constants/icons";
 import { images } from "@/constants/images";
 import { fetchMovies } from "@/services/api";
@@ -52,11 +51,6 @@ export default function Index() {
 				) :	(
 					<View className="flex-1 mt-5">
 						{/* Else the movies are fetched successfully */}
-						<SearchBar 
-							onPress={() => router.push("/search")} // Push user to another URL
-							placeholder="Search for a movie"
-						/>
-
 						<>
 							{/* Page Title */}
 							<Text className="text-lg text-white font-bold mt-5 mb-3" 

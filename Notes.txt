@@ -367,3 +367,122 @@ Finished movie search by using the search query to search for movies.
 Use the useEffect hook to trigger fetching another set of movies when the search term changes after a certain interval.
 
 Take advantage of the Flatlist props to determine what to show in different states of the screen (results found or empty or error).
+
+======================================================
+
+AppWrite is an easy Backend-as-a-Service (BaaS) platform to avoid having to do the nitty gritty work of having to build a separate app for tracking search movies pattern by a user.
+
+AppWrite is simple and open-source.
+
+Copy the ID of the created project from the AppWrite console and paste it into the .env file.
+
+------
+
+Next, setup a platform for the project, so go back to the project in AppWrite.
+
+1. Within the project, click on "+ Add platform" button and choose "React Native"
+2. Make sure the radio button is set to whatever OS you are using.
+3. Give the name (e.g., Mobile-Movie-App) and package name (e.g., com.momovie.app)
+4. Follow the instructions in the next step
+
+---
+
+Create a database from AppWrite and name it 'movies'.
+
+Copy the database ID and paste it into the .env file.
+
+---
+
+Create a database from AppWrite and name it 'movies'.
+
+Copy the database ID and paste it into the .env file.
+
+Click on the "+ Create collection" and name it 'metrics'.
+
+Copy the collection ID and paste it into the .env file.
+
+---
+
+Create the necessary attributes for the collection by switching over to the 'collection' tab.
+
+1. Create a string type attribute with the following config:
+
+[ Attribute key ]
+
+searchTerm
+
+[ Size ]
+
+1000
+
+[ Required ]
+
+✓
+
+2. Create a integer type attribute with the following config:
+
+[ Attribute key ]
+
+count
+
+[ Default value ]
+
+0
+
+(Keep track of how many a user has searched for each specific movie or a search term)
+
+3. Create a URL type attribute with the following config:
+
+[ Attribute key ]
+
+poster_url
+
+[ Required ]
+
+✓
+
+(Store the poster image of the movie being searched)
+
+4. Create a integer type attribute with the following config:
+
+[ Attribute key ]
+
+movie_id
+
+[ Required ]
+
+✓
+
+5. Create a string type attribute with the following config:
+
+[ Attribute key ]
+
+title
+
+[ Size ]
+
+1000
+
+[ Required ]
+
+✓
+
+----
+
+Afterwards, set the necessary permissions.
+
+1. Head over to the 'settings' tab in the current collection
+
+2. Scroll down to the 'Permissions' section.
+
+3. Add a new role of 'any'
+
+4. Tick every checkboxes there
+
+5. Click on 'update'
+
+-----
+
+Created a new TS file called 'appwrite.ts' in the 'services' folder.
+
+Updated the useEffect hook in 'search.tsx' to call the update search count.
